@@ -36,4 +36,7 @@ const s = local(state({ x: 2, y: [{ z: 4 }, {z : 5}, {z : 6}]}, 's');
 s.sub('y').sub(2).sub('z').subscribe(console.log);     // --> logs 5
 s.sub('x').value = 3;                                  // --> updates the state, rewriting on localStorage and notifying other tabs
 ```
+
+<br>
+
 👉 Read [RxDeep documentation](https://loreanvictor.github.io/rxdeep/) for more info.
