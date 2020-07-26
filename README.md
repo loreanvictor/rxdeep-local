@@ -28,6 +28,15 @@ const s = local(state({ x: 2, y: [{ z: 4 }, {z : 5}, {z : 6}]}, 's');
 
 <br>
 
+You can also just persist part of another state tree:
+
+```ts
+const s = state({ x: 2, y: [{ z: 4 }, {z : 5}, {z : 6}]});
+const l = local(s.sub('x'), 's.x');
+```
+
+<br>
+
 As per any [RxDeep](https://loreanvictor.github.io/rxdeep/) state, you can listen to and/or modify parts of a deep nested state:
 
 ```ts
@@ -40,3 +49,4 @@ s.sub('x').value = 3;                                  // --> updates the state,
 <br>
 
 👉 Read [RxDeep documentation](https://loreanvictor.github.io/rxdeep/) for more info.
+
