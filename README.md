@@ -27,6 +27,8 @@ s.value = 43; // --> updates local storage, informs other tabs/windows of the ch
 > it is somehow subscribed to (either itself or one of its sub-states). It is always a good idea
 > to call `.subscribe()` and manage that subscription.
 
+
+
 ▷ You can also use the class constructor instead of the shorthand function:
 ```ts
 import { LocalState } from 'rxdeep-local';
@@ -78,10 +80,10 @@ integrates nicely with common UI frameworks. You can use it in any context that 
 
 ## Performance
 
-Since serialization can be expensive, it is debounced by default by a `100ms` so that you can more easily bind states to UI events
+Since serialization can be expensive, it is debounced by default by `100ms` so that you can more comfortably bind states to UI events
 without performance drops.
 
-You can customize any of that behavior. You can for example throttle instead of debounce, picking the last value:
+You can customize that behavior. You can for example throttle instead of debounce, picking the last value:
 
 ```ts
 import { local } from 'rxdeep-local';
